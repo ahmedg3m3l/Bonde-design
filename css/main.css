@@ -1,0 +1,266 @@
+/* Start global rules  */
+:root{
+    --dark-color:#19283f;
+    --green-color:#33d1cc;
+    --red-color:#ff3150;
+    --yellow-color:#ffc400;
+    --section-color:#eff7fa;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+.btn-main{
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+.main-title::before{
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+}
+/* End global rules  */
+
+/* Start Nav  */
+.navbar{
+    background-color: var(--dark-color);
+}
+.navbar img{
+width: 100px;
+}
+.navbar .navbar-nav .nav-link {
+color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover{
+    color: var(--green-color);
+}
+.navbar .search {
+    border-left: 1px solid var(--green-color);
+}
+.navbar .search svg {
+color: var(--green-color);
+}
+.navbar .navbar-toggler{
+    color: white;
+    font-size: 20px;
+    border-color: white;
+}
+.navbar .navbar-toggler:focus{
+box-shadow: none;
+}
+/* End Nav  */
+
+/* Start landing */
+.landing{
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 72px);
+}
+/* End landing */
+
+/* Start features */
+.features .snow,
+.our-work .work,
+.stuff    .some,
+.blog     .blo{
+    color: var(--yellow-color);
+}
+.features .icon-holder{
+    height: 200px;
+}
+.features .icon-holder svg{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.features .icon-holder .number{
+font-size: 12rem;
+color: var(--section-color);
+
+}
+.features .icon-holder .icon{
+    font-size: 5rem;
+    color: var(--green-color);
+}
+.features .feat h4{
+    color: var(--yellow-color);
+}
+/* End features */
+
+/* Start our work  */
+.our-work{
+    background-color: var(--section-color);
+}
+.our-work ul .active{
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+.our-work ul li{
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.our-work ul li:not(.active):hover {
+    color: var(--red-color);
+}
+.our-work .box{
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.our-work .box::before{
+    content: attr(data-work);
+    position: absolute;
+    background-color: #0dcaf0a1;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    transition: 0.3s;
+    transform: translateX(calc(-100% - 5px));
+}
+.our-work .box:hover::before{
+
+    transform: translateX(0);
+}
+
+/* End our work  */
+
+/* Start stuff  */
+.stuff .description{
+    max-width: 500px;
+}
+/* End stuff  */
+
+/* Start team  */
+.team{
+    background-color: var(--section-color);
+}
+.team .box img{
+    height: 170px;
+}
+.team h2{
+    color: var(--yellow-color);
+}
+.team .box h4{
+    background-color: var(--green-color);
+}
+/* End team  */
+
+/* Start project */
+.project{
+    background-color: var(--dark-color);
+}
+/* End project */
+
+/* Start subscribe  */
+.subscribe{
+    background-color: var(--yellow-color);
+}
+.subscribe input[type="text"]{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+}
+.subscribe ::placeholder{
+    color: white;
+}
+.subscribe input[ type="submit"]{
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+}
+/* End subscribe  */
+
+/* Start footer  */
+.footer{
+    background-color: var(--dark-color);
+}
+.footer .info img{
+    width: 150px;
+}
+.footer .copyright p:first-of-type span {
+    color: var(--green-color);
+}
+.footer .copyright p:last-of-type span {
+    color: var(--yellow-color);
+}
+.footer .facebook {
+    color: #1877f2;
+}
+.footer .twitter {
+    color: black;
+}
+.footer .linkedin {
+    color: #0077b5;
+}
+.footer .instagram {
+    color: #ff0000;
+}
+/* End footer  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Small devices  */
+@media(max-width : 576px){
+    .container{
+        max-width: 540px;
+    }
+}
+/* mediam devices  */
+@media(min-width : 768px){
+    .container{
+        max-width: 720px;
+    }
+}
+/* PC devices  */
+@media(min-width : 992px){
+    .container{
+        max-width: 960px;
+    }
+}
+/* large screen  */
+@media(min-width : 1200px){
+    .container{
+        max-width: 1140px;
+    }
+}
